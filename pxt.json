@@ -2,7 +2,9 @@
     "name": "Battle Royale",
     "description": "",
     "dependencies": {
-        "device": "*"
+        "device": "*",
+        "controller": "*",
+        "darts": "*"
     },
     "files": [
         "main.blocks",
