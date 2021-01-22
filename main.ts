@@ -1,9 +1,30 @@
+controller.A.onEvent(ControllerButtonEvent.Pressed, function () {
+    myDart = darts.create(img`
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        . . . f f f f f f f f f . . . . 
+        . . . f f f f f f f f f f . . . 
+        . . . f f f f f f f f f f . . . 
+        . . . f f f f f f f f f . . . . 
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        `, SpriteKind.Enemy, mySprite.x + 10, mySprite.y)
+})
 controller.left.onEvent(ControllerButtonEvent.Pressed, function () {
     mySprite.x += -5
 })
 controller.right.onEvent(ControllerButtonEvent.Pressed, function () {
     mySprite.x += 5
 })
+let myDart: Dart = null
 let mySprite: Sprite = null
 scene.setBackgroundImage(img`
     1111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111
