@@ -17,12 +17,16 @@ controller.A.onEvent(ControllerButtonEvent.Pressed, function () {
         . . . . . . . . . . . . . . . . 
         . . . . . . . . . . . . . . . . 
         `, SpriteKind.Enemy, mySprite.x + 15, mySprite.y)
+    myDart.throwDart()
 })
 controller.left.onEvent(ControllerButtonEvent.Pressed, function () {
     mySprite.x += -5
 })
 controller.right.onEvent(ControllerButtonEvent.Pressed, function () {
     mySprite.x += 5
+})
+sprites.onOverlap(SpriteKind.Player, SpriteKind.Enemy, function (sprite, otherSprite) {
+    info.changeLifeBy(-1)
 })
 let myDart: Dart = null
 let mySprite: Sprite = null
@@ -167,3 +171,4 @@ mySprite = sprites.create(img`
     . . . . e e . . . . e e . . . . 
     `, SpriteKind.Player)
 mySprite.setPosition(35, 95)
+info.setLife(3)
