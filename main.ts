@@ -16,7 +16,7 @@ controller.A.onEvent(ControllerButtonEvent.Pressed, function () {
         . . . . . . . . . . . . . . . . 
         . . . . . . . . . . . . . . . . 
         . . . . . . . . . . . . . . . . 
-        `, SpriteKind.Enemy, mySprite.x + 10, mySprite.y)
+        `, SpriteKind.Enemy, mySprite.x + 15, mySprite.y)
 })
 controller.left.onEvent(ControllerButtonEvent.Pressed, function () {
     mySprite.x += -5
